@@ -1,18 +1,21 @@
 <script setup>
     import { computed } from 'vue'
+    
     const props = defineProps({
-        child: {
+        user: {
             type: Object,
             required: true
         }
     })
+    
     const fullName = computed(() => {
-        return `${props.child.name}, ${props.child.age} лет`
+        return `${props.user.name}, ${props.user.age} лет`
     })
 </script>
 
 <template>
-    <div class="preview__persons-item">
-        <p class="preview__name preview__name_black">{{fullName}}</p>
+    <div class="preview__about">
+        <p class="preview__title">Персональные данные</p>
+        <p class="preview__name">{{fullName}}</p>
     </div>
 </template>

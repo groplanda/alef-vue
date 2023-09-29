@@ -1,5 +1,10 @@
 <script setup>
-
+    const props = defineProps({
+        user: {
+            type: Object,
+            required: true
+        }
+    })
 </script>
 
 <template>
@@ -10,11 +15,11 @@
             <div class="person__info">
                 <div class="person__group person__group_full">
                     <p class="person__group-label">Имя</p>
-                    <p class="person__group-value">Петр</p>
+                    <input type="text" class="person__input person__group-value" placeholder="Петр" v-model="user.name" />
                 </div>
                 <div class="person__group person__group_full">
                     <p class="person__group-label">Возраст</p>
-                    <p class="person__group-value">99</p>
+                     <input type="number" class="person__input person__group-value" placeholder="99" v-model="user.age" />
                 </div>
             </div>
         </div>

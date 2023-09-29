@@ -1,19 +1,19 @@
 <script setup>
     import PersonCreateItem from "./PersonCreateItem.vue";
-    import { usePersonStore } from '../../stores/person';
-    const store = usePersonStore()
+    import { useChildStore } from '../../stores/childs';
+    const store = useChildStore()
 
-    const removePerson = (id) => {
-        store.deletePerson(id);
+    const deleteChild = (id) => {
+        store.deleteChild(id);
     }
 
-    const updatePerson = (person) => {
-        store.updatePerson(person);
+    const updateChild = (child) => {
+        store.updateChild(child);
     }
 </script>
 
 <template>
     <div class="person__list">
-        <PersonCreateItem v-for="person in store.getPersons" :key="person.id" :person="person" @remove-person="removePerson" @update-person="updatePerson" />
+        <PersonCreateItem v-for="child in store.getChilds" :key="child.id" :child="child" @remove-child="deleteChild" @update-child="updateChild" />
     </div>
 </template>
