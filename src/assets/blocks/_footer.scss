@@ -1,0 +1,19 @@
+.footer {
+    background: #FAFAFA;
+    box-shadow: 0px 1px 0px 0px rgba($text-color, 0.10);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: auto;
+    margin-bottom: 0;
+
+    &__container {
+        width: 100%;
+        text-align: center; 
+    }
+
+    &__copyright {
+        color: $black-color;
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
